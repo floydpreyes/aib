@@ -26,6 +26,12 @@ Invoke-Expression -Command 'C:\temp\fslogix\x64\Release\FSLogixAppsSetup.exe /in
 #Start sleep
 Start-Sleep -Seconds 10
 
+#Disable Windows Update
+Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -name NoAutoUpdate -Value “1” -Force | Out-Null
+
+#Setup Timezone redirection
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -Type DWORD -name EnableTimeZoneRedirection -Value “1” -Force | Out-Null
+
 #InstallTeamsMachinemode Preview Media Optimisations - Reg pre-reqs
 New-Item -Path HKLM:\SOFTWARE\Microsoft\Teams -Force | Out-Null
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Teams -name IsWVDEnvironment -Value “1” -Force | Out-Null
