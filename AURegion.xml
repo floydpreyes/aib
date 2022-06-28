@@ -9,17 +9,13 @@
 </gs:UserLocale>
 <!--  system locale  -->
 <gs:SystemLocale Name="en-AU"/>
-<!--  GeoID  -->
-<gs:LocationPreferences>
-<gs:GeoID Value="12"/>
-</gs:LocationPreferences>
+</gs:SystemLocale>
 <gs:MUILanguagePreferences>
 <gs:MUILanguage Value="en-AU"/>
 <gs:MUIFallback Value="en-US"/>
 </gs:MUILanguagePreferences>
 <!--  input preferences  -->
 <gs:InputPreferences>
-<!-- en-GB -->
 <gs:InputLanguageID Action="add" ID="0c09:00000409" Default="true"/>
 </gs:InputPreferences>
 </gs:GlobalizationServices>
