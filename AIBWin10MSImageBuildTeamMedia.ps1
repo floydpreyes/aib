@@ -34,7 +34,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Se
 
 #InstallTeamsMachinemode Preview Media Optimisations - Reg pre-reqs
 New-Item -Path HKLM:\SOFTWARE\Microsoft\Teams -Force | Out-Null
-New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Teams -name IsWVDEnvironment -PropertyType DWORD DWORD -Value “1” -Force | Out-Null
+New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Teams -name IsWVDEnvironment -PropertyType DWORD -Value “1” -Force | Out-Null
 
 #Install VC++ & WebSocket Service then Teams with media optimisations
 Invoke-WebRequest -Uri 'https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads' -OutFile 'c:\temp\vc.msi'
