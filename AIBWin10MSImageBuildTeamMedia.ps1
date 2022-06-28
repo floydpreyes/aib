@@ -30,7 +30,7 @@ Start-Sleep -Seconds 10
 Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -name NoAutoUpdate -Value “1” -Force | Out-Null
 
 #Setup Timezone redirection
-New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -Type DWORD -name EnableTimeZoneRedirection -Value “1” -Force | Out-Null
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -Type DWORD -name fEnableTimeZoneRedirection -Value “1” -Force | Out-Null
 
 #InstallTeamsMachinemode Preview Media Optimisations - Reg pre-reqs
 New-Item -Path HKLM:\SOFTWARE\Microsoft\Teams -Force | Out-Null
